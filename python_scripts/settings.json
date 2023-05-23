@@ -1,0 +1,17 @@
+{
+  "comm_settings": {
+    "default_interface_type": "Wifi",
+    "linux_port_name": "/dev/ttyACM0",
+    "osx_port_name": "/dev/cu.usbmodem3102",
+    "windows_port_name": "COM5",
+    "baud_rate": 9600,
+    "timeout": 0.2,
+    "arduino_ip_1": "192",
+    "arduino_ip_2": "168",
+    "arduino_ip_3": "1",
+    "arduino_ip_4": "148",
+    "udp_port": 2390,
+    "polling_enabled": false,
+    "polling_interval": 5
+  }
+}
