@@ -1,0 +1,35 @@
+This project is based off the ARDUINO UNO WiFi REV2 board and has the following goals:
+	-Getting familiar with Kicad Schematic capture and PCB layout
+	-Basic surface mount soldering
+	-Implementing python client to configure and interact with uC
+
+Features:
+	-Simple communications between uC and python client via:
+		-UART over usb
+		-UDP packets via wireless network
+	-Use of CRC based error checking for incomming and outgoing packets
+	-Button input (push and latching) with debouncing + pulse count
+	-RTC clock via I2C to configure system time at start-up
+	-Implementation of Alarms
+		-ON_OFF or Cycle/Period modes
+	-4 x DS1820B digital temperature sensors via Dallas One-Wire protocol
+	-2 x analog inputs for basic sensors [0-5V @20mA max]
+	-4 x outputs to control 120VAC with SSR relays
+	-4 x optocoupler isolated outputs to control 12VDC
+	-Dividing code in Tasks
+		-Communications
+		-Temperature conversion cycles
+		-Input IO Finite State machines for detecting states
+		-Analog sensor sampling
+		-Wifi connection monitoring
+		-System time synch refresh once day
+
+Main Libraries
+	-TaskScheduler.h -> a cooperative multitask library for ESP-32 and Arduino platforms
+		https://github.com/arkhipenko/TaskScheduler/blob/master/src/TaskScheduler.h
+	-TimeAlarms.h -> a scheduling 
+		https://github.com/PaulStoffregen/TimeAlarms
+
+
+
+
